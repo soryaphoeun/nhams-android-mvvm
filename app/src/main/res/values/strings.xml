@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Nhams</string>
+
+<!--    Home screen-->
+    <string name="near_me">Near Me</string>
+    <string name="type_food">Type of food</string>
+    <string name="location">Location</string>
+    <string name="recommended">Recommended</string>
+    <string name="home">Home</string>
+    <string name="coupon">Coupon</string>
+    <string name="favorite">Favorite</string>
+    <string name="me">Me</string>
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_maps">Map</string>
+
+
+</resources>
