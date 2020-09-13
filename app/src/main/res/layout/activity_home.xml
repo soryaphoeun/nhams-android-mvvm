@@ -45,7 +45,7 @@
                     android:paddingTop="22dp"
                     android:paddingLeft="6dp"
                     android:text="ចង់ញ៉ាំ"
-                    android:textSize="25sp"
+                    android:textSize="30sp"
                     android:textStyle="bold"
                     android:textColor="@color/colorWhite"/>
 
@@ -57,6 +57,7 @@
                 android:layout_marginTop="15dp">
 
                 <LinearLayout
+                    android:id="@+id/llSearch"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="25dp"
@@ -72,9 +73,10 @@
                         android:src="@drawable/ic_search_red"
                         android:layout_marginLeft="10dp"/>
 
-                    <EditText
+                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:gravity="center_vertical"
                         android:layout_marginLeft="8dp"
                         android:singleLine="true"
                         android:hint="Search restaurants"

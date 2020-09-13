@@ -22,10 +22,12 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     private RecommendAdapter recommendAdapter;
     private CouponAdapter couponAdapter;
     private RecyclerView recommendRecyclerView, couponRecyclerView;
-    private LinearLayout llNearMe;
+    private LinearLayout llNearMe, llSearch;
 
     private ArrayList<RecommendDetailItem>  recommendItemList;
     private ArrayList<CouponDetailItem> couponItemList;
+
+    private Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,18 +36,23 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
 
         onBindView();
         registerOnClick(this);
+
+        intent = new Intent(this, ShopsActivity.class);
+
     }
 
     private void onBindView(){
         recommendRecyclerView = findViewById(R.id.rvRecommend);
         couponRecyclerView = findViewById(R.id.rvCoupon);
         llNearMe = findViewById(R.id.llNearMe);
+        llSearch = findViewById(R.id.llSearch);
     }
 
     private  void registerOnClick(View.OnClickListener clickListener){
         couponRecycler(couponRecyclerView);
         recommendRecycler(recommendRecyclerView);
         llNearMe.setOnClickListener(clickListener);
+        llSearch.setOnClickListener(clickListener);
     }
 
     private void recommendRecycler(RecyclerView recyclerView) {
@@ -84,7 +91,9 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.llNearMe :
-                Intent intent = new Intent(this, ShopsActivity.class);
+                startActivity(intent);
+
+            case R.id.llSearch :
                 startActivity(intent);
         }
     }
